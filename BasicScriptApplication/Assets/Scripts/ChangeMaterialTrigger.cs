@@ -23,11 +23,7 @@ public class ChangeMaterialTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("Player Detected");
-            if (player.GetComponent<Renderer>().material.name == black.name + " (Instance)")
-            {
-                Debug.Log("detected black material");
-                this.gameObject.GetComponent<Renderer>().material = black;
-            }
+           
             if (player.GetComponent<Renderer>().material.name == red.name + " (Instance)")
             {
                 Debug.Log("detected red material");

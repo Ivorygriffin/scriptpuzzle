@@ -26,8 +26,10 @@ public class ResetSubmit : MonoBehaviour
     }
     public void CorrectCheck()
     {
+        Debug.Log("button pressed");
         if (platform1.GetComponent<Renderer>().material.name == blue.name + " (Instance)")
         {
+            
             Text.print("Level Complete");
         } 
     }
