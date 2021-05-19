@@ -26,8 +26,7 @@ public class ResetSubmit : MonoBehaviour
     }
     public void CorrectCheck()
     {
-        if (platform1 == blue)//and platform 2 blue etc, how do you add multiple conditions + doesnt work
-                              //or create another section titled correctpattern1 and in such write correct 
+        if (platform1.GetComponent<Renderer>().material.name == blue.name + " (Instance)")
         {
             Text.print("Level Complete");
         } 

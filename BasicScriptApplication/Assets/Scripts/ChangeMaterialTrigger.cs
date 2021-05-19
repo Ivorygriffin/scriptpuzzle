@@ -26,32 +26,32 @@ public class ChangeMaterialTrigger : MonoBehaviour
             if (player.GetComponent<Renderer>().material.name == black.name + " (Instance)")
             {
                 Debug.Log("detected black material");
-                this.gameObject.GetComponent<Renderer>().material.name = black.name;
+                this.gameObject.GetComponent<Renderer>().material = black;
             }
             if (player.GetComponent<Renderer>().material.name == red.name + " (Instance)")
             {
                 Debug.Log("detected red material");
-                this.gameObject.GetComponent<Renderer>().material.name = red.name;
+                this.gameObject.GetComponent<Renderer>().material = red;
             }
             if (player.GetComponent<Renderer>().material.name == green.name + " (Instance)")
             {
                 Debug.Log("detected green material");
-                this.gameObject.GetComponent<Renderer>().material.name = green.name;
+                this.gameObject.GetComponent<Renderer>().material = green;
             }
             if (player.GetComponent<Renderer>().material.name == blue.name + " (Instance)")
             {
                 Debug.Log("detected blue material");
-                this.gameObject.GetComponent<Renderer>().material.name = blue.name;
+                this.gameObject.GetComponent<Renderer>().material = blue;
             }
-            if (player.GetComponent<Renderer>().material.name == yellow.name + " (Instance) ")
+            if (player.GetComponent<Renderer>().material.name == yellow.name + " (Instance)")
             {
                 Debug.Log("detected yellow material");
-                this.gameObject.GetComponent<Renderer>().material.name = yellow.name;
+                this.gameObject.GetComponent<Renderer>().material = yellow;
             }
-            if (player.GetComponent<Renderer>().material.name == white.name + " (Instance) ")
+            if (player.GetComponent<Renderer>().material.name == white.name + " (Instance)")
             {
                 Debug.Log("detected white material");
-                this.gameObject.GetComponent<Renderer>().material.name = white.name;
+                this.gameObject.GetComponent<Renderer>().material = white;
             }
 
         }
