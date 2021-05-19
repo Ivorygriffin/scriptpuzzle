@@ -11,42 +11,51 @@ public class ChangeMaterialTrigger : MonoBehaviour
     public Material yellow;
     public Material white;
     public Material blue;
+   
 
     void Start()
     {
         
     }
-    private void OnTriggerEnter(Collider collidedObject)
+    private void OnCollisionEnter(Collision other)
     {
-        if (collidedObject.gameObject.tag == "Player")
+        Debug.Log("collided");
+        if (other.gameObject.tag == "Player")
         {
+            Debug.Log("Player Detected");
+            if (player.GetComponent<Renderer>().material.name == black.name + " (Instance)")
+            {
+                Debug.Log("detected black material");
+                this.gameObject.GetComponent<Renderer>().material.name = black.name;
+            }
+            if (player.GetComponent<Renderer>().material.name == red.name + " (Instance)")
+            {
+                Debug.Log("detected red material");
+                this.gameObject.GetComponent<Renderer>().material.name = red.name;
+            }
+            if (player.GetComponent<Renderer>().material.name == green.name + " (Instance)")
+            {
+                Debug.Log("detected green material");
+                this.gameObject.GetComponent<Renderer>().material.name = green.name;
+            }
+            if (player.GetComponent<Renderer>().material.name == blue.name + " (Instance)")
+            {
+                Debug.Log("detected blue material");
+                this.gameObject.GetComponent<Renderer>().material.name = blue.name;
+            }
+            if (player.GetComponent<Renderer>().material.name == yellow.name + " (Instance) ")
+            {
+                Debug.Log("detected yellow material");
+                this.gameObject.GetComponent<Renderer>().material.name = yellow.name;
+            }
+            if (player.GetComponent<Renderer>().material.name == white.name + " (Instance) ")
+            {
+                Debug.Log("detected white material");
+                this.gameObject.GetComponent<Renderer>().material.name = white.name;
+            }
 
         }
-        if (player.GetComponent<Renderer>().material.name == black.name + " (Instance)")
-        {
-            this.gameObject.GetComponent<Renderer>().material.name = black.name;
-        }
-        else if (player.GetComponent<Renderer>().material.name == red.name + " (Instance)")
-        {
-            this.gameObject.GetComponent<Renderer>().material.name = red.name;
-        }
-        else if (player.GetComponent<Renderer>().material.name == green.name + " (Instance)")
-        {
-            this.gameObject.GetComponent<Renderer>().material.name = green.name;
-        }
-        else if (player.GetComponent<Renderer>().material.name == blue.name + " (Instance)")
-        {
-            this.gameObject.GetComponent<Renderer>().material.name = blue.name;
-        }
-        else if (player.GetComponent<Renderer>().material.name == yellow.name + " (Instance) ")
-        {
-            this.gameObject.GetComponent<Renderer>().material.name = yellow.name;
-        }
-        else if (player.GetComponent<Renderer>().material.name == white.name + " (Instance) ") ;
-        {
-            this.gameObject.GetComponent<Renderer>().material.name = white.name;
-        }
-        
+
 
 
 
